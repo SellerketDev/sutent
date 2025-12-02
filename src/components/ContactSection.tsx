@@ -1,8 +1,13 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function ContactSection() {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert("메시지가 전송되었습니다! (데모 기능)");
+  };
+
   return (
-    <footer id="contact" className="bg-zinc-950 border-t border-zinc-900 pt-24 pb-10">
+    <footer id="contact" className="relative z-10 bg-zinc-950 border-t border-zinc-900 pt-24 pb-10">
       <div className="container-custom px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
           {/* Contact Info */}
@@ -49,26 +54,26 @@ export default function ContactSection() {
           {/* Contact Form */}
           <div className="bg-white/5 p-6 md:p-8 rounded-lg border border-white/10">
             <h3 className="text-lg md:text-xl font-bold mb-6">Send us a message</h3>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm text-gray-400 mb-1">Name</label>
-                  <input type="text" className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" />
+                  <input type="text" className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" placeholder="Your Name" />
                 </div>
                 <div>
                   <label className="block text-sm text-gray-400 mb-1">Company</label>
-                  <input type="text" className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" />
+                  <input type="text" className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" placeholder="Company Name" />
                 </div>
               </div>
               <div>
                 <label className="block text-sm text-gray-400 mb-1">Email</label>
-                <input type="email" className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" />
+                <input type="email" className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" placeholder="hello@example.com" />
               </div>
               <div>
                 <label className="block text-sm text-gray-400 mb-1">Message</label>
-                <textarea rows={4} className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base"></textarea>
+                <textarea rows={4} className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" placeholder="Tell us about your project..."></textarea>
               </div>
-              <button type="button" className="w-full bg-accent text-black font-bold py-3 md:py-4 rounded hover:bg-white transition-colors text-sm md:text-base">
+              <button type="submit" className="w-full bg-accent text-black font-bold py-3 md:py-4 rounded hover:bg-white transition-colors text-sm md:text-base">
                 SEND MESSAGE
               </button>
             </form>

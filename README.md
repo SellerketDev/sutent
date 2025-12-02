@@ -44,6 +44,7 @@
 - [ ] **Media Optimization**: 고화질 영상 및 이미지를 끊김 없이 로딩하기 위한 최적화 작업.
 ## 5. Getting Started (실행 방법)
 
+### Local Environment (로컬 실행)
 ```bash
 # 1. 의존성 패키지 설치
 npm install
@@ -53,6 +54,17 @@ npm run dev
 
 # 3. 프로덕션 빌드 (배포용)
 npm run build
+```
+
+### Docker Environment (도커 실행)
+Nginx 등 복잡한 설정 없이 바로 실행 가능합니다.
+
+```bash
+# Docker Compose로 실행 (권장)
+docker-compose up -d --build
+
+# 접속 확인
+# http://localhost:3000
 ```
 
 ## 6. Environment Info (개발 환경)
