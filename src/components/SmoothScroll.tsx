@@ -25,7 +25,7 @@ export default function SmoothScroll() {
       
       if (anchor && anchor.hash && anchor.hash.startsWith('#') && anchor.origin === window.location.origin) {
         e.preventDefault();
-        const targetElement = document.querySelector(anchor.hash);
+        const targetElement = document.querySelector(anchor.hash) as HTMLElement;
         if (targetElement) {
           lenis.scrollTo(targetElement, {
             offset: 0,

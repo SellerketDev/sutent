@@ -35,16 +35,16 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-6xl md:text-8xl font-bold mb-8 leading-tight tracking-tight"
+            className="text-4xl sm:text-6xl md:text-8xl font-bold mb-8 leading-tight tracking-tight break-keep"
           >
-            SUT <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500">ENTERTAINMENT</span>
+            SUT <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-500 block sm:inline">ENTERTAINMENT</span>
           </motion.h1>
           
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-gray-300 max-w-2xl mx-auto text-lg md:text-xl mb-12 font-light leading-relaxed"
+            className="text-gray-300 max-w-2xl mx-auto text-base md:text-xl mb-12 font-light leading-relaxed break-keep px-4"
           >
             우리는 단순한 마케팅을 하지 않습니다.<br className="hidden md:block" />
             <strong className="text-white">데이터</strong>에 기반한 전략과 <strong className="text-white">크리에이티브</strong>한 감각으로<br className="hidden md:block" />
@@ -55,18 +55,18 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col md:flex-row justify-center gap-6"
+            className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 px-4"
           >
             <a 
               href="#contact" 
-              className="group relative px-8 py-4 bg-accent text-black font-bold rounded-sm overflow-hidden transition-all hover:scale-105"
+              className="group relative w-full sm:w-auto px-8 py-4 bg-accent text-black font-bold rounded-sm overflow-hidden transition-all hover:scale-105 text-center"
             >
               <span className="relative z-10">START PROJECT</span>
               <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
             </a>
             <a 
               href="#models" 
-              className="px-8 py-4 border border-white/30 text-white rounded-sm hover:bg-white/10 backdrop-blur-sm transition-all hover:border-white hover:scale-105"
+              className="w-full sm:w-auto px-8 py-4 border border-white/30 text-white rounded-sm hover:bg-white/10 backdrop-blur-sm transition-all hover:border-white hover:scale-105 text-center"
             >
               VIEW OUR MODELS
             </a>

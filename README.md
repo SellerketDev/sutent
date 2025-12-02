@@ -42,8 +42,6 @@
 - [x] **Cinematic Transitions**: 페이지 이동 및 스크롤 시 영화 같은 부드러운 움직임 구현 (Lenis, Preloader).
 - [ ] **Micro-Interactions**: 버튼 클릭, 커서 움직임에 반응하는 섬세한 마이크로 인터랙션 추가.
 - [ ] **Media Optimization**: 고화질 영상 및 이미지를 끊김 없이 로딩하기 위한 최적화 작업.
-- [ ] **Admin System**: 인플루언서 DB 관리 및 캠페인 대시보드(Backend) 연동.
-
 ## 5. Getting Started (실행 방법)
 
 ```bash

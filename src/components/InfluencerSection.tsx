@@ -75,13 +75,13 @@ export default function InfluencerSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-90 group-hover:opacity-70 transition-opacity duration-300"></div>
               
-              <div className="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                <div className="overflow-hidden">
-                  <p className="text-accent font-bold tracking-wider text-sm mb-2 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 delay-75">
+              <div className="absolute bottom-0 left-0 w-full p-6 md:p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                <div className="overflow-hidden mb-2">
+                  <p className="text-accent font-bold tracking-wider text-sm transform translate-y-[150%] group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300 delay-75">
                     {model.category}
                   </p>
                 </div>
-                <h3 className="text-3xl font-bold text-white mb-2">{model.name}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{model.name}</h3>
                 <div className="flex gap-2 mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
                   {model.tags.map((tag, i) => (
                     <span key={i} className="text-xs text-gray-300 border border-white/20 px-2 py-1 rounded-full">

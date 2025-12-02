@@ -43,25 +43,25 @@ export default function ServicesSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-24"
+          className="text-center mb-12 md:mb-24"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-6">Why SUT Ent?</h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 break-keep">Why SUT Ent?</h2>
+          <p className="text-base md:text-xl text-gray-400 max-w-2xl mx-auto break-keep">
             단순한 중개를 넘어, <span className="text-white font-bold">기술과 데이터</span>를 통해 가장 확실한 마케팅 솔루션을 제안합니다.
           </p>
         </motion.div>
 
-        <div className="space-y-32">
+        <div className="space-y-16 md:space-y-32">
           {services.map((service, index) => {
             const isEven = index % 2 === 0;
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, x: isEven ? -100 : 100 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 0, y: 50 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true, margin: "-100px" }}
-                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20`}
+                viewport={{ once: true, margin: "-50px" }}
+                className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-8 lg:gap-20`}
               >
                 {/* Image Side */}
                 <div className="w-full lg:w-3/5">
@@ -79,13 +79,13 @@ export default function ServicesSection() {
 
                 {/* Text Side */}
                 <div className="w-full lg:w-2/5 text-center lg:text-left">
-                  <div className={`inline-flex p-3 rounded-xl bg-accent/10 text-accent mb-6 ${!isEven && 'lg:ml-auto'}`}>
+                  <div className={`inline-flex p-3 rounded-xl bg-accent/10 text-accent mb-4 md:mb-6 ${!isEven && 'lg:ml-auto'}`}>
                     {service.icon}
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                  <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6 break-keep">
                     {service.title}
                   </h3>
-                  <p className="text-lg text-gray-400 leading-relaxed">
+                  <p className="text-base md:text-lg text-gray-400 leading-relaxed break-keep">
                     {service.description}
                   </p>
                 </div>

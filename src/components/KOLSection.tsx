@@ -10,7 +10,7 @@ export default function KOLSection() {
       </div>
       
       <div className="container-custom relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-16">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 px-4">
           
           {/* Visual Side */}
           <motion.div 
@@ -18,7 +18,7 @@ export default function KOLSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="lg:w-1/2 relative"
+            className="w-full lg:w-1/2 relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10">
                <img 
@@ -32,24 +32,24 @@ export default function KOLSection() {
                <motion.div 
                  animate={{ y: [0, -10, 0] }}
                  transition={{ duration: 4, repeat: Infinity }}
-                 className="absolute top-10 left-10 bg-black/60 backdrop-blur-md border border-accent/30 p-4 rounded-lg"
+                 className="absolute top-4 left-4 sm:top-10 sm:left-10 bg-black/60 backdrop-blur-md border border-accent/30 p-3 sm:p-4 rounded-lg"
                >
-                 <div className="flex items-center gap-3">
-                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                   <span className="text-sm font-mono text-accent">NODE CONNECTED</span>
+                 <div className="flex items-center gap-2 sm:gap-3">
+                   <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse"></div>
+                   <span className="text-xs sm:text-sm font-mono text-accent">NODE CONNECTED</span>
                  </div>
                </motion.div>
                
                <motion.div 
                  animate={{ y: [0, 10, 0] }}
                  transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-                 className="absolute bottom-10 right-10 bg-black/60 backdrop-blur-md border border-white/10 p-4 rounded-lg max-w-xs"
+                 className="absolute bottom-4 right-4 sm:bottom-10 sm:right-10 bg-black/60 backdrop-blur-md border border-white/10 p-3 sm:p-4 rounded-lg max-w-[160px] sm:max-w-xs"
                >
-                 <p className="text-white font-bold mb-1">ROI Analysis</p>
+                 <p className="text-white font-bold mb-1 text-xs sm:text-base">ROI Analysis</p>
                  <div className="w-full bg-gray-700 h-1 rounded-full overflow-hidden">
                    <div className="bg-accent w-[85%] h-full"></div>
                  </div>
-                 <p className="text-right text-xs text-accent mt-1">+245% Growth</p>
+                 <p className="text-right text-[10px] sm:text-xs text-accent mt-1">+245% Growth</p>
                </motion.div>
             </div>
           </motion.div>
@@ -60,19 +60,19 @@ export default function KOLSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="lg:w-1/2"
+            className="w-full lg:w-1/2"
           >
-            <div className="flex items-center gap-2 text-accent font-bold tracking-widest mb-4">
-              <Network className="w-5 h-5" />
+            <div className="flex items-center gap-2 text-accent font-bold tracking-widest mb-4 text-sm sm:text-base">
+              <Network className="w-4 h-4 sm:w-5 sm:h-5" />
               <span>WEB3 & BLOCKCHAIN</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight text-white">
-              Strategic Marketing for<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white">Decentralized Future</span>
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight text-white break-keep">
+              Strategic Marketing for<br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white block md:inline mt-2 md:mt-0">Decentralized Future</span>
             </h2>
             
-            <p className="text-lg text-gray-400 mb-10 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-400 mb-8 md:mb-10 leading-relaxed break-keep">
               블록체인 및 핀테크 프로젝트는 일반적인 마케팅 접근법으로는 성공하기 어렵습니다. 
               SUT Ent.는 프로젝트의 기술적 이해도를 갖춘 <span className="text-white font-semibold">KOL(Key Opinion Leader)</span>들과 함께 
               진정성 있는 커뮤니티를 구축합니다.
