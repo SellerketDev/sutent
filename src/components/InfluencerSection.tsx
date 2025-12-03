@@ -3,42 +3,45 @@ import { motion } from 'framer-motion';
 const influencers = [
   {
     id: 1,
-    name: "Kim Ji-soo",
+    name: "Alexander Morel",
     category: "Fashion & Beauty",
     followers: "250K",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/influencer/Alexander_Morel_France.PNG",
     tags: ["#Luxury", "#Chic", "#Trend"]
   },
   {
     id: 2,
-    name: "Lee Min-woo",
+    name: "Mariela Argentina",
     category: "Lifestyle & Travel",
     followers: "180K",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/influencer/Mariela_Argentina.jpg",
     tags: ["#Vlog", "#Trip", "#Mood"]
   },
   {
     id: 3,
-    name: "Park Ha-eun",
+    name: "Nicole Canlas",
     category: "Cosmetics",
     followers: "320K",
-    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/influencer/Nicole_Canlas_Philippines.jpg",
     tags: ["#Pure", "#SkinCare", "#Daily"]
   },
   {
     id: 4,
-    name: "Choi Joon",
+    name: "Milla Grisel",
     category: "Tech & Blockchain",
     followers: "150K",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/influencer/Milla_Grisel_USA.jpg",
     tags: ["#Review", "#Crypto", "#Tech"]
   }
 ];
 
 export default function InfluencerSection() {
   return (
-    <section id="models" className="py-32 bg-black">
-      <div className="container-custom">
+    <section id="models" className="py-32 relative overflow-hidden">
+      {/* Semi-transparent overlay to improve readability over stars */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/60 to-black/80 z-0"></div>
+      
+      <div className="container-custom relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

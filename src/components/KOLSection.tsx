@@ -3,7 +3,10 @@ import { Network, Lock, Cpu } from 'lucide-react';
 
 export default function KOLSection() {
   return (
-    <section id="kol" className="py-32 bg-zinc-950 relative overflow-hidden">
+    <section id="kol" className="py-32 relative overflow-hidden">
+      {/* Semi-transparent overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/80 z-0"></div>
+
       {/* Abstract Background - Tech/Nodes */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#444_1px,transparent_1px)] [background-size:20px_20px]"></div>

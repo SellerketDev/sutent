@@ -7,14 +7,14 @@ function Stars(props: any) {
   
   // Generate random points in a sphere
   const sphere = useMemo(() => {
-    const count = 5000;
+    const count = 8000; // Increased star count for galaxy feel
     const positions = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
       const u = Math.random();
       const v = Math.random();
       const theta = 2 * Math.PI * u;
       const phi = Math.acos(2 * v - 1);
-      const r = 1.5 * Math.cbrt(Math.random()); // cbrt for uniform distribution in sphere
+      const r = 1.8 * Math.cbrt(Math.random()); // Increased radius for depth
       
       const x = r * Math.sin(phi) * Math.cos(theta);
       const y = r * Math.sin(phi) * Math.sin(theta);
@@ -29,8 +29,8 @@ function Stars(props: any) {
 
   useFrame((_state, delta) => {
     if (ref.current) {
-      ref.current.rotation.x -= delta / 10;
-      ref.current.rotation.y -= delta / 15;
+      ref.current.rotation.x -= delta / 15; // Slower rotation for mystery
+      ref.current.rotation.y -= delta / 20;
     }
   });
 
@@ -40,9 +40,10 @@ function Stars(props: any) {
         <PointMaterial
           transparent
           color="#d4af37"
-          size={0.002}
+          size={0.0015} // Slightly smaller for finer detail
           sizeAttenuation={true}
           depthWrite={false}
+          opacity={0.8}
         />
       </Points>
     </group>

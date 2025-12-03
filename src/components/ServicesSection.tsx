@@ -4,27 +4,27 @@ import { BarChart3, Globe2, ShieldCheck, Zap } from 'lucide-react';
 const services = [
   {
     icon: <Zap className="w-6 h-6" />,
-    title: "Rapid Casting",
-    description: "AI 기반 매칭 시스템으로 브랜드에 최적화된 인플루언서를 24시간 내 매칭합니다.",
-    image: "/images/service_1.jfif"
+    title: "Hyper-Speed Casting",
+    description: "독자적인 AI 매칭 알고리즘으로 브랜드 페르소나에 완벽하게 부합하는 인플루언서를 단 24시간 내에 제안합니다. 속도가 곧 경쟁력입니다.",
+    image: "/images/service_1.jpg"
   },
   {
     icon: <Globe2 className="w-6 h-6" />,
-    title: "Global Reach",
-    description: "국내뿐만 아니라 북미, 동남아시아 KOL 네트워크를 통한 글로벌 마케팅을 지원합니다.",
-    image: "/images/service_2.jfif"
+    title: "Borderless Expansion",
+    description: "국경 없는 마케팅을 실현합니다. 북미, 동남아시아, 유럽 등 글로벌 현지 KOL 네트워크를 통해 귀사의 브랜드를 전 세계에 각인시킵니다.",
+    image: "/images/service_2.jpg"
   },
   {
     icon: <BarChart3 className="w-6 h-6" />,
-    title: "Data Analytics",
-    description: "단순 노출이 아닌, 전환율(ROAS) 중심의 정밀한 성과 분석 리포트를 제공합니다.",
-    image: "/images/service_3.jfif"
+    title: "Precision Data Intelligence",
+    description: "단순 노출 수치를 넘어섭니다. 전환율(CVR), ROAS, 참여도 등 실질적인 성과 지표를 정밀 분석하여 다음 스텝을 위한 명확한 인사이트를 제공합니다.",
+    image: "/images/service_3.webp"
   },
   {
     icon: <ShieldCheck className="w-6 h-6" />,
-    title: "Risk Management",
-    description: "인플루언서 리스크 모니터링 및 계약 관리로 안전한 마케팅 실행을 보장합니다.",
-    image: "/images/service_4.jfif"
+    title: "Zero-Risk Assurance",
+    description: "체계적인 리스크 모니터링 시스템과 법적 보호 장치를 통해, 브랜드 이미지 손상 없는 가장 안전하고 투명한 마케팅 실행을 보장합니다.",
+    image: "/images/service_4.jpg"
   }
 ];
 
@@ -45,9 +45,10 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-12 md:mb-24"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 break-keep">Why SUT Ent?</h2>
-          <p className="text-base md:text-xl text-gray-400 max-w-2xl mx-auto break-keep">
-            단순한 중개를 넘어, <span className="text-white font-bold">기술과 데이터</span>를 통해 가장 확실한 마케팅 솔루션을 제안합니다.
+          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 break-keep">Why Choose SUT Ent?</h2>
+          <p className="text-base md:text-xl text-gray-400 max-w-3xl mx-auto break-keep leading-relaxed">
+            우리는 단순한 대행사가 아닙니다. <span className="text-white font-bold">압도적인 데이터</span>와 <span className="text-white font-bold">글로벌 인프라</span>를 기반으로, 
+            불확실한 마케팅 시장에서 <span className="text-accent font-bold">가장 확실한 성공 방정식</span>을 제시하는 비즈니스 파트너입니다.
           </p>
         </motion.div>
 

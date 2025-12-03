@@ -7,8 +7,11 @@ export default function ContactSection() {
   };
 
   return (
-    <footer id="contact" className="relative z-10 bg-zinc-950 border-t border-zinc-900 pt-24 pb-10">
-      <div className="container-custom px-4">
+    <footer id="contact" className="relative z-10 border-t border-white/10 pt-24 pb-10 overflow-hidden">
+      {/* Semi-transparent overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black z-0"></div>
+
+      <div className="container-custom px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
           {/* Contact Info */}
           <div>
