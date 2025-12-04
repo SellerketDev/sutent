@@ -28,7 +28,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs md:text-sm text-gray-500">Phone</p>
-                  <p className="text-base md:text-lg font-semibold">02-1234-5678</p>
+                  <p className="text-base md:text-lg font-semibold">02-6929-1994</p>
                 </div>
               </div>
               
@@ -48,7 +48,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs md:text-sm text-gray-500">Office</p>
-                  <p className="text-base md:text-lg font-semibold break-keep">Seoul, Gangnam-gu, Teheran-ro 123</p>
+                  <p className="text-base md:text-lg font-semibold break-keep">Seoul, Guro-gu, Digital-ro 288</p>
                 </div>
               </div>
             </div>

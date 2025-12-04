@@ -3,7 +3,7 @@ services:
     container_name: sut-ent-landing
     build: .
     ports:
-      - "3000:3000"
+      - "40680:3000"
     restart: always
     environment:
       - NODE_ENV=production

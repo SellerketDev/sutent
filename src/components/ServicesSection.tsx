@@ -1,36 +1,36 @@
 import { motion } from 'framer-motion';
-import { BarChart3, Globe2, ShieldCheck, Zap } from 'lucide-react';
+import { BarChart3, Globe2, ShieldCheck, Zap, Mic, User, Video } from 'lucide-react';
 
 const services = [
   {
     icon: <Zap className="w-6 h-6" />,
     title: "Hyper-Speed Casting",
-    description: "독자적인 AI 매칭 알고리즘으로 브랜드 페르소나에 완벽하게 부합하는 인플루언서를 단 24시간 내에 제안합니다. 속도가 곧 경쟁력입니다.",
-    image: "/images/service_1.jpg"
+    description: "독자적인 AI 매칭 알고리즘으로 브랜드 페르소나에 완벽하게 부합하는 인플루언서를 단 24시간 내에 제안합니다.",
+    image: "/images/service_1.jfif"
   },
   {
     icon: <Globe2 className="w-6 h-6" />,
     title: "Borderless Expansion",
-    description: "국경 없는 마케팅을 실현합니다. 북미, 동남아시아, 유럽 등 글로벌 현지 KOL 네트워크를 통해 귀사의 브랜드를 전 세계에 각인시킵니다.",
-    image: "/images/service_2.jpg"
+    description: "북미, 동남아시아, 유럽 등 글로벌 현지 KOL 네트워크를 통해 귀사의 브랜드를 전 세계에 각인시킵니다.",
+    image: "/images/service_2.jfif"
   },
   {
     icon: <BarChart3 className="w-6 h-6" />,
     title: "Precision Data Intelligence",
-    description: "단순 노출 수치를 넘어섭니다. 전환율(CVR), ROAS, 참여도 등 실질적인 성과 지표를 정밀 분석하여 다음 스텝을 위한 명확한 인사이트를 제공합니다.",
-    image: "/images/service_3.webp"
+    description: "전환율(CVR), ROAS, 참여도 등 실질적인 성과 지표를 정밀 분석하여 명확한 인사이트를 제공합니다.",
+    image: "/images/service_3.jfif"
   },
   {
     icon: <ShieldCheck className="w-6 h-6" />,
     title: "Zero-Risk Assurance",
-    description: "체계적인 리스크 모니터링 시스템과 법적 보호 장치를 통해, 브랜드 이미지 손상 없는 가장 안전하고 투명한 마케팅 실행을 보장합니다.",
-    image: "/images/service_4.jpg"
+    description: "체계적인 리스크 모니터링 시스템과 법적 보호 장치를 통해, 가장 안전하고 투명한 마케팅 실행을 보장합니다.",
+    image: "/images/service_4.jfif"
   }
 ];
 
 export default function ServicesSection() {
   return (
-    <section className="py-24 bg-zinc-900 relative overflow-hidden">
+    <section id="services" className="py-24 bg-zinc-900 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-20 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent rounded-full mix-blend-overlay filter blur-[100px] animate-pulse"></div>
@@ -38,21 +38,86 @@ export default function ServicesSection() {
       </div>
 
       <div className="container-custom relative z-10 px-4">
+        {/* Top: Global Connect Visual Section */}
         <motion.div 
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-12 md:mb-24"
+          className="flex flex-col lg:flex-row items-center gap-12 mb-32"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 break-keep">Why Choose SUT Ent?</h2>
-          <p className="text-base md:text-xl text-gray-400 max-w-3xl mx-auto break-keep leading-relaxed">
-            우리는 단순한 대행사가 아닙니다. <span className="text-white font-bold">압도적인 데이터</span>와 <span className="text-white font-bold">글로벌 인프라</span>를 기반으로, 
-            불확실한 마케팅 시장에서 <span className="text-accent font-bold">가장 확실한 성공 방정식</span>을 제시하는 비즈니스 파트너입니다.
-          </p>
+          {/* Left: Text Content */}
+          <div className="w-full lg:w-1/2">
+            <div className="inline-block px-4 py-2 border border-accent/30 rounded-full bg-accent/10 text-accent text-sm font-bold mb-6 tracking-widest uppercase">
+              Global Network Agency
+            </div>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight break-keep">
+              Global Connect &<br/> 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">All-in-One Solution</span>
+            </h2>
+            <div className="space-y-6 text-gray-300 text-lg leading-relaxed break-keep">
+              <p>
+                <strong className="text-white">SUT Ent.</strong>는 전 세계 브랜드와 <span className="text-accent">성우, KOL, 인플루언서, 모델</span>을 하나로 연결하는 허브입니다.
+              </p>
+              <p>
+                단순한 중개를 넘어, 에이전시의 <span className="text-white font-semibold">세심한 케어</span>, 엔터테인먼트의 <span className="text-white font-semibold">기획력</span>, 그리고 광고 대행사의 <span className="text-white font-semibold">퍼포먼스</span>를 결합했습니다.
+              </p>
+              <p className="text-gray-400 text-base border-l-2 border-accent pl-4 mt-6 italic">
+                "국경 없는 크리에이티브 네트워크로, 귀사의 브랜드가 닿지 못할 곳은 없습니다."
+              </p>
+            </div>
+          </div>
+
+          {/* Right: Visual Representation */}
+          <div className="w-full lg:w-1/2 relative">
+            {/* Main Visual Card */}
+            <div className="relative z-10 bg-zinc-800/50 backdrop-blur-xl border border-white/10 rounded-2xl p-1 overflow-hidden shadow-2xl">
+              <div className="grid grid-cols-2 gap-1">
+                <div className="relative aspect-square overflow-hidden rounded-tl-xl group">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" alt="Model" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-black/40 flex items-end p-4">
+                    <div className="text-white font-bold text-sm flex items-center gap-2"><User size={16} className="text-accent" /> MODEL</div>
+                  </div>
+                </div>
+                <div className="relative aspect-square overflow-hidden rounded-tr-xl group">
+                  <img src="https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=1000&auto=format&fit=crop" alt="KOL" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-black/40 flex items-end p-4">
+                    <div className="text-white font-bold text-sm flex items-center gap-2"><Zap size={16} className="text-accent" /> KOL</div>
+                  </div>
+                </div>
+                <div className="relative aspect-square overflow-hidden rounded-bl-xl group">
+                  <img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1000&auto=format&fit=crop" alt="Voice Actor" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-black/40 flex items-end p-4">
+                    <div className="text-white font-bold text-sm flex items-center gap-2"><Mic size={16} className="text-accent" /> VOICE</div>
+                  </div>
+                </div>
+                <div className="relative aspect-square overflow-hidden rounded-br-xl group">
+                  <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop" alt="Influencer" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <div className="absolute inset-0 bg-black/40 flex items-end p-4">
+                    <div className="text-white font-bold text-sm flex items-center gap-2"><Video size={16} className="text-accent" /> CREATOR</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Center Connection Circle */}
+              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-black/80 backdrop-blur-md rounded-full border border-accent/50 flex items-center justify-center z-20 shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+                <Globe2 className="text-accent w-10 h-10 animate-pulse" />
+              </div>
+            </div>
+
+            {/* Decorative Circles behind */}
+            <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-3xl -z-10"></div>
+            <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
+          </div>
         </motion.div>
 
-        <div className="space-y-16 md:space-y-32">
+        {/* Existing Services List */}
+        <div className="space-y-16 md:space-y-32 mt-24 border-t border-white/5 pt-24">
+          <div className="text-center mb-16">
+             <h3 className="text-2xl md:text-3xl font-bold mb-4">Our Core Competencies</h3>
+             <p className="text-gray-400">성공적인 캠페인을 위한 SUT Ent.만의 차별화된 전략</p>
+          </div>
+
           {services.map((service, index) => {
             const isEven = index % 2 === 0;
             return (

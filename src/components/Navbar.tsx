@@ -15,6 +15,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8 text-sm tracking-widest">
+            <a href="#services" className="hover:text-accent transition-colors">SERVICES</a>
             <a href="#models" className="hover:text-accent transition-colors">MODELS</a>
             <a href="#kol" className="hover:text-accent transition-colors">KOL & BLOCKCHAIN</a>
             <a href="#contact" className="hover:text-accent transition-colors">CONTACT</a>
@@ -33,6 +34,7 @@ export default function Navbar() {
       {isOpen && (
         <div className="md:hidden bg-black border-t border-gray-800">
           <div className="flex flex-col p-4 space-y-4 text-center">
+            <a href="#services" onClick={() => setIsOpen(false)} className="hover:text-accent">SERVICES</a>
             <a href="#models" onClick={() => setIsOpen(false)} className="hover:text-accent">MODELS</a>
             <a href="#kol" onClick={() => setIsOpen(false)} className="hover:text-accent">KOL</a>
             <a href="#contact" onClick={() => setIsOpen(false)} className="hover:text-accent">CONTACT</a>

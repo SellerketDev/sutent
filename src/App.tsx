@@ -6,6 +6,7 @@ import ServicesSection from './components/ServicesSection';
 import InfluencerSection from './components/InfluencerSection';
 import KOLSection from './components/KOLSection';
 import ContactSection from './components/ContactSection';
+import RecruitSection from './components/RecruitSection';
 import ThreeBackground from './components/ThreeBackground';
 import SmoothScroll from './components/SmoothScroll';
 import Preloader from './components/Preloader';
@@ -29,6 +30,7 @@ function App() {
             <ServicesSection />
             <InfluencerSection />
             <KOLSection />
+            <RecruitSection />
           </main>
           <ContactSection />
         </div>
