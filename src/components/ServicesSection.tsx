@@ -6,25 +6,25 @@ const services = [
     icon: <Zap className="w-6 h-6" />,
     title: "Hyper-Speed Casting",
     description: "독자적인 AI 매칭 알고리즘으로 브랜드 페르소나에 완벽하게 부합하는 인플루언서를 단 24시간 내에 제안합니다.",
-    image: "/images/service_1.jfif"
+    image: "/images/service_1.jpg"
   },
   {
     icon: <Globe2 className="w-6 h-6" />,
     title: "Borderless Expansion",
     description: "북미, 동남아시아, 유럽 등 글로벌 현지 KOL 네트워크를 통해 귀사의 브랜드를 전 세계에 각인시킵니다.",
-    image: "/images/service_2.jfif"
+    image: "/images/service_2.jpg"
   },
   {
     icon: <BarChart3 className="w-6 h-6" />,
     title: "Precision Data Intelligence",
     description: "전환율(CVR), ROAS, 참여도 등 실질적인 성과 지표를 정밀 분석하여 명확한 인사이트를 제공합니다.",
-    image: "/images/service_3.jfif"
+    image: "/images/service_3.webp"
   },
   {
     icon: <ShieldCheck className="w-6 h-6" />,
     title: "Zero-Risk Assurance",
     description: "체계적인 리스크 모니터링 시스템과 법적 보호 장치를 통해, 가장 안전하고 투명한 마케팅 실행을 보장합니다.",
-    image: "/images/service_4.jfif"
+    image: "/images/service_4.jpg"
   }
 ];
 
@@ -80,7 +80,7 @@ export default function ServicesSection() {
                   </div>
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-tr-xl group">
-                  <img src="https://images.unsplash.com/photo-1516280440614-6697288d5d38?q=80&w=1000&auto=format&fit=crop" alt="KOL" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <img src="/images/KOL1.png" alt="KOL" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-4">
                     <div className="text-white font-bold text-sm flex items-center gap-2"><Zap size={16} className="text-accent" /> KOL</div>
                   </div>
@@ -92,7 +92,7 @@ export default function ServicesSection() {
                   </div>
                 </div>
                 <div className="relative aspect-square overflow-hidden rounded-br-xl group">
-                  <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=1000&auto=format&fit=crop" alt="Influencer" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                  <img src="/images/Creator1.png" alt="Influencer" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-black/40 flex items-end p-4">
                     <div className="text-white font-bold text-sm flex items-center gap-2"><Video size={16} className="text-accent" /> CREATOR</div>
                   </div>
