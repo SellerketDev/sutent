@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image with Parallax Effect */}
@@ -28,7 +31,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-accent font-bold tracking-[0.3em] mb-6 uppercase text-sm md:text-base"
           >
-            Premium Influencer & KOL Agency
+            {t.hero.subtitle}
           </motion.h2>
           
           <motion.h1 
@@ -46,9 +49,9 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-gray-300 max-w-2xl mx-auto text-base md:text-xl mb-12 font-light leading-relaxed break-keep px-4"
           >
-            우리는 단순한 마케팅을 하지 않습니다.<br className="hidden md:block" />
-            <strong className="text-white">데이터</strong>에 기반한 전략과 <strong className="text-white">크리에이티브</strong>한 감각으로<br className="hidden md:block" />
-            브랜드의 가치를 극대화하는 <span className="text-accent">하이엔드 파트너</span>입니다.
+            {t.hero.desc1}<br className="hidden md:block" />
+            <strong className="text-white">{t.hero.desc2_1}</strong>{t.hero.desc2_2}<strong className="text-white">{t.hero.desc2_3}</strong>{t.hero.desc2_4}<br className="hidden md:block" />
+            {t.hero.desc3_1}<span className="text-accent">{t.hero.desc3_2}</span>{t.hero.desc3_3}
           </motion.p>
           
           <motion.div 
@@ -61,14 +64,14 @@ export default function Hero() {
               href="#contact" 
               className="group relative w-full sm:w-auto px-8 py-4 bg-accent text-black font-bold rounded-sm overflow-hidden transition-all hover:scale-105 text-center"
             >
-              <span className="relative z-10">START PROJECT</span>
+              <span className="relative z-10">{t.hero.btn_project}</span>
               <div className="absolute inset-0 bg-white transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></div>
             </a>
             <a 
               href="#models" 
               className="w-full sm:w-auto px-8 py-4 border border-white/30 text-white rounded-sm hover:bg-white/10 backdrop-blur-sm transition-all hover:border-white hover:scale-105 text-center"
             >
-              VIEW OUR MODELS
+              {t.hero.btn_models}
             </a>
           </motion.div>
         </div>

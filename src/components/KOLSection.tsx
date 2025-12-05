@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { Network, Lock, Cpu } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function KOLSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="kol" className="py-32 relative overflow-hidden">
       {/* Semi-transparent overlay */}
@@ -67,18 +70,16 @@ export default function KOLSection() {
           >
             <div className="flex items-center gap-2 text-accent font-bold tracking-widest mb-4 text-sm sm:text-base">
               <Network className="w-4 h-4 sm:w-5 sm:h-5" />
-              <span>WEB3 & BLOCKCHAIN</span>
+              <span>{t.kol.badge}</span>
             </div>
             
             <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-8 leading-tight text-white break-keep">
-              Strategic Marketing for<br className="hidden md:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white block md:inline mt-2 md:mt-0">Decentralized Future</span>
+              {t.kol.title_1}<br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-white block md:inline mt-2 md:mt-0">{t.kol.title_2}</span>
             </h2>
             
             <p className="text-base md:text-lg text-gray-400 mb-8 md:mb-10 leading-relaxed break-keep">
-              블록체인 및 핀테크 프로젝트는 일반적인 마케팅 접근법으로는 성공하기 어렵습니다. 
-              SUT Ent.는 프로젝트의 기술적 이해도를 갖춘 <span className="text-white font-semibold">KOL(Key Opinion Leader)</span>들과 함께 
-              진정성 있는 커뮤니티를 구축합니다.
+              {t.kol.desc}
             </p>
 
             <div className="space-y-6">
@@ -87,8 +88,8 @@ export default function KOLSection() {
                    <Cpu className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-2">Deep Tech Understanding</h4>
-                  <p className="text-sm text-gray-500">DeFi, NFT, Layer1/2 등 각 섹터에 대한 깊은 이해를 바탕으로 한 콘텐츠 기획</p>
+                  <h4 className="text-xl font-bold text-white mb-2">{t.kol.feature1_title}</h4>
+                  <p className="text-sm text-gray-500">{t.kol.feature1_desc}</p>
                 </div>
               </div>
               
@@ -97,15 +98,15 @@ export default function KOLSection() {
                    <Lock className="w-6 h-6 text-accent" />
                 </div>
                 <div>
-                  <h4 className="text-xl font-bold text-white mb-2">Trust Building</h4>
-                  <p className="text-sm text-gray-500">검증된 리더들의 보이스를 통해 프로젝트의 신뢰도(Trustworthiness) 확보</p>
+                  <h4 className="text-xl font-bold text-white mb-2">{t.kol.feature2_title}</h4>
+                  <p className="text-sm text-gray-500">{t.kol.feature2_desc}</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-10">
               <button className="bg-white text-black px-8 py-3 font-bold rounded-sm hover:bg-accent transition-colors flex items-center gap-2">
-                CONSULTING REQUEST <span aria-hidden="true">→</span>
+                {t.kol.btn} <span aria-hidden="true">→</span>
               </button>
             </div>
           </motion.div>

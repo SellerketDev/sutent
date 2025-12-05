@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const influencers = [
   {
@@ -36,6 +37,8 @@ const influencers = [
 ];
 
 export default function InfluencerSection() {
+  const { t } = useLanguage();
+
   return (
     <section id="models" className="py-32 relative overflow-hidden">
       {/* Semi-transparent overlay to improve readability over stars */}
@@ -51,13 +54,12 @@ export default function InfluencerSection() {
         >
           <div>
             <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white">
-              EXCLUSIVE<br />
-              <span className="text-zinc-800">INFLUENCERS</span>
+              {t.influencer.title_1}<br />
+              <span className="text-zinc-800">{t.influencer.title_2}</span>
             </h2>
           </div>
-          <p className="text-gray-400 max-w-md text-right mt-4 md:mt-0">
-            각 분야에서 가장 영향력 있는 목소리.<br />
-            SUT Ent.의 전속 크리에이터를 만나보세요.
+          <p className="text-gray-400 max-w-md text-right mt-4 md:mt-0 break-keep">
+            {t.influencer.desc}
           </p>
         </motion.div>
 
@@ -94,7 +96,7 @@ export default function InfluencerSection() {
                 </div>
                 <div className="mt-6 pt-6 border-t border-white/20 flex justify-between items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
                   <div>
-                    <span className="block text-xs text-gray-400">Followers</span>
+                    <span className="block text-xs text-gray-400">{t.influencer.followers}</span>
                     <span className="text-xl font-bold text-white">{model.followers}</span>
                   </div>
                   <button className="bg-white text-black rounded-full p-3 hover:bg-accent transition-colors">

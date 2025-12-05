@@ -1,7 +1,10 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Star } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function RecruitSection() {
+  const { t } = useLanguage();
+
   return (
     <section className="py-20 bg-black relative border-t border-zinc-900">
       <div className="container-custom px-4 relative z-10">
@@ -16,14 +19,13 @@ export default function RecruitSection() {
             <div className="lg:w-2/3">
               <div className="flex items-center gap-2 text-accent mb-4 font-bold tracking-wider uppercase text-sm">
                 <Star size={16} fill="currentColor" />
-                <span>Recruiting Global Talents</span>
+                <span>{t.recruit.badge}</span>
               </div>
               <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight break-keep">
-                Are You the Next <span className="text-accent">Star?</span>
+                {t.recruit.title}
               </h2>
               <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl leading-relaxed break-keep">
-                SUT Ent.는 전 세계를 무대로 활동할 <strong>성우, 인플루언서, 모델, KOL</strong>을 찾고 있습니다.<br className="hidden md:block" />
-                당신의 재능이 빛날 수 있도록 최고의 글로벌 파트너가 되어드리겠습니다.
+                {t.recruit.desc}
               </p>
               
               <div className="flex flex-wrap gap-3">
@@ -43,7 +45,7 @@ export default function RecruitSection() {
                 className="group flex items-center gap-4 bg-white text-black px-8 py-5 rounded-full font-bold text-lg hover:bg-accent hover:text-black transition-all shadow-lg shadow-white/10"
                 onClick={() => window.location.href = 'mailto:recruit@sutent.com'}
               >
-                <span>Apply Now</span>
+                <span>{t.recruit.btn}</span>
                 <ArrowRight className="group-hover:translate-x-1 transition-transform" />
               </motion.button>
             </div>
@@ -53,4 +55,3 @@ export default function RecruitSection() {
     </section>
   );
 }
-

@@ -1,9 +1,12 @@
 import { Mail, Phone, MapPin } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function ContactSection() {
+  const { t } = useLanguage();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    alert("메시지가 전송되었습니다! (데모 기능)");
+    alert("Message Sent! (Demo)");
   };
 
   return (
@@ -15,10 +18,9 @@ export default function ContactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
           {/* Contact Info */}
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 break-keep">Ready to Work With Us?</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 break-keep">{t.contact.title}</h2>
             <p className="text-sm md:text-base text-gray-400 mb-8 break-keep">
-              인플루언서 섭외, KOL 마케팅 제안 등 궁금한 점이 있으시다면 언제든 연락주세요.
-              성공적인 비즈니스 파트너가 되어드리겠습니다.
+              {t.contact.desc}
             </p>
             
             <div className="space-y-6">
@@ -28,7 +30,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs md:text-sm text-gray-500">Phone</p>
-                  <p className="text-base md:text-lg font-semibold">02-6929-1994</p>
+                  <p className="text-base md:text-lg font-semibold">+82 2-6929-1994</p>
                 </div>
               </div>
               
@@ -38,7 +40,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-xs md:text-sm text-gray-500">Email</p>
-                  <p className="text-base md:text-lg font-semibold">contact@sutent.com</p>
+                  <p className="text-base md:text-lg font-semibold">contact@sutentr.com</p>
                 </div>
               </div>
 
@@ -56,28 +58,28 @@ export default function ContactSection() {
 
           {/* Contact Form */}
           <div className="bg-white/5 p-6 md:p-8 rounded-lg border border-white/10">
-            <h3 className="text-lg md:text-xl font-bold mb-6">Send us a message</h3>
+            <h3 className="text-lg md:text-xl font-bold mb-6">{t.contact.form_title}</h3>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm text-gray-400 mb-1">Name</label>
+                  <label className="block text-sm text-gray-400 mb-1">{t.contact.labels.name}</label>
                   <input type="text" className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" placeholder="Your Name" />
                 </div>
                 <div>
-                  <label className="block text-sm text-gray-400 mb-1">Company</label>
+                  <label className="block text-sm text-gray-400 mb-1">{t.contact.labels.company}</label>
                   <input type="text" className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" placeholder="Company Name" />
                 </div>
               </div>
               <div>
-                <label className="block text-sm text-gray-400 mb-1">Email</label>
+                <label className="block text-sm text-gray-400 mb-1">{t.contact.labels.email}</label>
                 <input type="email" className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" placeholder="hello@example.com" />
               </div>
               <div>
-                <label className="block text-sm text-gray-400 mb-1">Message</label>
+                <label className="block text-sm text-gray-400 mb-1">{t.contact.labels.message}</label>
                 <textarea rows={4} className="w-full bg-black border border-gray-700 rounded p-3 focus:border-accent focus:outline-none text-white text-sm md:text-base" placeholder="Tell us about your project..."></textarea>
               </div>
               <button type="submit" className="w-full bg-accent text-black font-bold py-3 md:py-4 rounded hover:bg-white transition-colors text-sm md:text-base">
-                SEND MESSAGE
+                {t.contact.labels.btn}
               </button>
             </form>
           </div>
@@ -90,5 +92,3 @@ export default function ContactSection() {
     </footer>
   );
 }
-
-

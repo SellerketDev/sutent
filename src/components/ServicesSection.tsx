@@ -1,34 +1,37 @@
 import { motion } from 'framer-motion';
 import { BarChart3, Globe2, ShieldCheck, Zap, Mic, User, Video } from 'lucide-react';
-
-const services = [
-  {
-    icon: <Zap className="w-6 h-6" />,
-    title: "Hyper-Speed Casting",
-    description: "독자적인 AI 매칭 알고리즘으로 브랜드 페르소나에 완벽하게 부합하는 인플루언서를 단 24시간 내에 제안합니다.",
-    image: "/images/service_1.jpg"
-  },
-  {
-    icon: <Globe2 className="w-6 h-6" />,
-    title: "Borderless Expansion",
-    description: "북미, 동남아시아, 유럽 등 글로벌 현지 KOL 네트워크를 통해 귀사의 브랜드를 전 세계에 각인시킵니다.",
-    image: "/images/service_2.jpg"
-  },
-  {
-    icon: <BarChart3 className="w-6 h-6" />,
-    title: "Precision Data Intelligence",
-    description: "전환율(CVR), ROAS, 참여도 등 실질적인 성과 지표를 정밀 분석하여 명확한 인사이트를 제공합니다.",
-    image: "/images/service_3.webp"
-  },
-  {
-    icon: <ShieldCheck className="w-6 h-6" />,
-    title: "Zero-Risk Assurance",
-    description: "체계적인 리스크 모니터링 시스템과 법적 보호 장치를 통해, 가장 안전하고 투명한 마케팅 실행을 보장합니다.",
-    image: "/images/service_4.jpg"
-  }
-];
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function ServicesSection() {
+  const { t } = useLanguage();
+
+  const services = [
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: t.services.list[0].title,
+      description: t.services.list[0].description,
+      image: "/images/service_1.jpg"
+    },
+    {
+      icon: <Globe2 className="w-6 h-6" />,
+      title: t.services.list[1].title,
+      description: t.services.list[1].description,
+      image: "/images/service_2.jpg"
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: t.services.list[2].title,
+      description: t.services.list[2].description,
+      image: "/images/service_3.webp"
+    },
+    {
+      icon: <ShieldCheck className="w-6 h-6" />,
+      title: t.services.list[3].title,
+      description: t.services.list[3].description,
+      image: "/images/service_4.jpg"
+    }
+  ];
+
   return (
     <section id="services" className="py-24 bg-zinc-900 relative overflow-hidden">
       {/* Background Elements */}
@@ -49,21 +52,21 @@ export default function ServicesSection() {
           {/* Left: Text Content */}
           <div className="w-full lg:w-1/2">
             <div className="inline-block px-4 py-2 border border-accent/30 rounded-full bg-accent/10 text-accent text-sm font-bold mb-6 tracking-widest uppercase">
-              Global Network Agency
+              {t.services.badge}
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight break-keep">
-              Global Connect &<br/> 
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">All-in-One Solution</span>
+              {t.services.title_main}<br/> 
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">{t.services.title_sub}</span>
             </h2>
             <div className="space-y-6 text-gray-300 text-lg leading-relaxed break-keep">
               <p>
-                <strong className="text-white">SUT Ent.</strong>는 전 세계 브랜드와 <span className="text-accent">성우, KOL, 인플루언서, 모델</span>을 하나로 연결하는 허브입니다.
+                {t.services.intro_1}
               </p>
               <p>
-                단순한 중개를 넘어, 에이전시의 <span className="text-white font-semibold">세심한 케어</span>, 엔터테인먼트의 <span className="text-white font-semibold">기획력</span>, 그리고 광고 대행사의 <span className="text-white font-semibold">퍼포먼스</span>를 결합했습니다.
+                {t.services.intro_2}
               </p>
               <p className="text-gray-400 text-base border-l-2 border-accent pl-4 mt-6 italic">
-                "국경 없는 크리에이티브 네트워크로, 귀사의 브랜드가 닿지 못할 곳은 없습니다."
+                {t.services.quote}
               </p>
             </div>
           </div>
@@ -114,8 +117,8 @@ export default function ServicesSection() {
         {/* Existing Services List */}
         <div className="space-y-16 md:space-y-32 mt-24 border-t border-white/5 pt-24">
           <div className="text-center mb-16">
-             <h3 className="text-2xl md:text-3xl font-bold mb-4">Our Core Competencies</h3>
-             <p className="text-gray-400">성공적인 캠페인을 위한 SUT Ent.만의 차별화된 전략</p>
+             <h3 className="text-2xl md:text-3xl font-bold mb-4">{t.services.core_title}</h3>
+             <p className="text-gray-400">{t.services.core_desc}</p>
           </div>
 
           {services.map((service, index) => {
